@@ -1,7 +1,7 @@
 # Личный проект «Кекстаграм»
 
 * Студент: [Журман Юлия](https://up.htmlacademy.ru/javascript/30/user/2189919).
-* Наставник: `Неизвестно`.
+* Наставник: [Александр Конотоп](https://htmlacademy.ru/profile/sineway).
 
 ---
 

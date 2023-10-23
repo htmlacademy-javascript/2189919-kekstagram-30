@@ -11,7 +11,8 @@ const getRandomInteger = (min, max) => {
 
 const createPicturesData = (itemCount = 25) => {
   const descriptions = ['Описание1', 'Описание2', 'Описание3'];
-  return new Array (25).fill(1).map((start, index) => ({
+
+  return new Array (itemCount).fill(1).map((start, index) => ({
     id: start + index,
     url: `photos/${start + index}.jpg`,
     description: getRandomItem(descriptions),

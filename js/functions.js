@@ -29,3 +29,20 @@ parseDigits('ECMAScript 2022'); // 2022
 parseDigits('1 кефир, 0.5 батона'); // 105
 parseDigits('агент 007'); // 7
 parseDigits('а я томат'); // NaN
+
+
+//Функция перевода часов в минуты
+const convertHoursToMinutes = (time) => {
+  const [hours, minutes] = time.split(':').map(Number);
+  return hours * 60 + minutes;
+};
+
+//Функция проверки: не выходит ли время встречи за пределы рабочего дня
+const validateMeetingTime = (workStart, workEnd, meetingStart, meetingDuration) => {
+  workStart = convertHoursToMinutes(workStart);
+  workEnd = convertHoursToMinutes(workEnd);
+  meetingStart = convertHoursToMinutes(meetingStart);
+  return workStart <= meetingStart && workEnd >= (meetingStart + meetingDuration);
+};
+
+void (validateMeetingTime);
